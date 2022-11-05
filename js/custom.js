@@ -5,7 +5,7 @@
   
     //  Helper functions
     function escapeHtml(html) {
-      return html.replace(/×/g, '&times;')
+      return html.replace(/x/g, '&times;')
                  .replace(/«/g, '&laquo;')
                  .replace(/»/g, '&raquo;')
                  .replace(/←/g, '&larr;')
@@ -46,37 +46,37 @@
     }
   
     // Add source modals
-    function addSourceModals() {
-      const sourceModalElement = document.getElementById('source-modal');
+    // function addSourceModals() {
+    //   const sourceModalElement = document.getElementById('source-modal');
   
-      if (!sourceModalElement) {
-        return;
-      }
+    //   if (!sourceModalElement) {
+    //     return;
+    //   }
   
-      sourceModalElement.querySelector('.btn-copy').addEventListener('click', (e) => {
-        if (navigator.clipboard) {
-          const code = sourceModalElement.querySelector('.modal-body pre').innerText;
-          navigator.clipboard.writeText(code);
-        }
+    //   sourceModalElement.querySelector('.btn-copy').addEventListener('click', (e) => {
+    //     if (navigator.clipboard) {
+    //       const code = sourceModalElement.querySelector('.modal-body pre').innerText;
+    //       navigator.clipboard.writeText(code);
+    //     }
   
-        const sourceModal = bootstrap.Modal.getOrCreateInstance(sourceModalElement);
-        sourceModal.hide();
-      });
+    //     const sourceModal = bootstrap.Modal.getOrCreateInstance(sourceModalElement);
+    //     sourceModal.hide();
+    //   });
   
-      document.body.addEventListener('click', event => {
-        if (!event.target.matches('.source-button')) {
-          return;
-        }
+    //   document.body.addEventListener('click', event => {
+    //     if (!event.target.matches('.source-button')) {
+    //       return;
+    //     }
   
-        const sourceModal = bootstrap.Modal.getOrCreateInstance(sourceModalElement);
-        let html = event.target.parentNode.innerHTML;
+    //     const sourceModal = bootstrap.Modal.getOrCreateInstance(sourceModalElement);
+    //     let html = event.target.parentNode.innerHTML;
   
-        html = Prism.highlight(cleanSource(html), Prism.languages.html, 'html');
+    //     html = Prism.highlight(cleanSource(html), Prism.languages.html, 'html');
   
-        sourceModalElement.querySelector('code').innerHTML = html;
-        sourceModal.show();
-      }, false);
-    }
+    //     sourceModalElement.querySelector('code').innerHTML = html;
+    //     sourceModal.show();
+    //   }, false);
+    // }
   
     addNavbarTransparentClass();
   
