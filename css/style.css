@@ -1,0 +1,48 @@
+time {
+    float: right;
+    margin-left: 10px;
+    height: 17px;
+    line-height: 18px;
+    color: #a6a6a6;
+    font-size: 11px;
+    letter-spacing: 0;
+}
+
+.comment {
+    margin-left:5px;
+}
+
+.login {
+    width:110px;    
+    /* box-sizing: border-box; */
+    margin-left:10px;
+    margin-right:10px;
+    margin-top:15px;
+    font-weight: bold;
+}
+
+.register {
+    width:110px;
+    margin-left:10px;
+    margin-right:10px;
+    margin-top:5px;
+    font-weight: bold;
+}
+
+.find {
+    width:110px;
+    margin-left:10px;
+    margin-right:10px;
+    margin-top:5px;
+    font-weight: bold;
+}
+
+.titletext{
+    /* font-weight: bold; */
+}
+
+.row {
+    /* margin-top:10px; */
+    margin-bottom:30px;
+    /* margin-bottom:10px; */
+}
