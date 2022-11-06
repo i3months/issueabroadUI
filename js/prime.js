@@ -1,3 +1,6 @@
+// https://github.com/thomaspark/bootswatch/ 에서 가져온 파일.
+// https://bootswatch.com/materia/ 스니펫을 적용할 때 필요함.
+// 필요에 따라 조금 수정함
 
 /* **********************************************
      Begin prism-core.js
